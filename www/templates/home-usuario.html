@@ -1,0 +1,19 @@
+
+<ion-view view-title="Inicio" name="home-view" style="background-image: url('img/fondo.png');">
+  <ion-content class="padding" ng-controller="pasarCtrl">
+  	<style>
+   #boton{text-shadow: 1px 1px 1px #000;}
+	</style>
+  	  <div align="center">
+  		<img src="img/logo.png" style="height: 40%; width: 70%;">	
+  	  </div>
+
+<br>
+<br>
+
+      <button class="button button-block icon-left ion-flame button-positive"  ng-click="listarEmergencias()" id="boton">Emergencias Activas</button>
+       <button class="button button-block icon-left ion-flame button-positive"  ng-click="listarGrifos()" id="boton">Mostrar Grifos</button>
+      <button class="button button-block button-assertive icon-left ion-android-exit"  ng-click="cerrarSesion()" id="boton">Cerrar Sesión</button>
+     
+  </ion-content>
+</ion-view>

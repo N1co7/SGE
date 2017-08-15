@@ -1,0 +1,26 @@
+<ion-view view-title="Lista Emergencia" name="listar-emergencias-view" style= "background-image: url('img/fondo.png');">
+	<ion-content class="padding" ng-controller="listarEmergenciasCtrl">
+		<div align="center">
+  		<img src="img/logo.png" style="height: 40%; width: 70%;">	
+  	  </div>
+		<div class="list">
+			<ul>
+				<h2 style="color:bisque" align="center">Emergencias Activas</h2>
+				<li ng-repeat="emergencia in emergencias">
+					<br>
+					<p class="item item-icon-left"><i class="icon ion-android-list" style="color:forestgreen;"></i>Dirección: {{emergencia.direccion}}</p>
+					<p class="item item-icon-left"><i class="icon ion-ios-arrow-forward" style="color:forestgreen;"></i>Descripción: {{emergencia.descripcion}}</p>
+					<p class="item item-icon-left"><i class="icon ion-key" style="color:forestgreen;"></i>Clave: {{emergencia.clave}}</p>
+					
+					<p ng-click="hola(emergencia.id_emergencia)" class="button-block item item-icon-left" > <i class= "icon ion-clipboard" style="color:red"></i> Más informacion </p>
+					</br>
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<div class="col text-center">  
+		    	<button class="button button-block color="light" round icon-left icon ion-home" ng-click="volver()" type="button">Volver</button>
+   		  	</div>
+		</div>
+	</ion-content>
+</ion-view>

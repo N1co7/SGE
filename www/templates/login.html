@@ -1,0 +1,38 @@
+
+<ion-view view-title="Sistema de gestion de emergencia" name="login-view">
+  <ion-content class="padding-bottom" ng-controller="loginCtrl">
+    <div align="center">
+       <img src="img/logo.png" style="height: 40%; width: 70%;">
+    </div>
+    <style>
+      h2{text-align:center;}
+      .padding{color: red;}
+    </style>
+    <div class="list list-inset" style="margin-top:auto;">
+      <form name="formLogin" novalidate>
+      <label class="item item-input">
+		    <span class="input-label">R.U.N:</span>
+        <input type="text" placeholder="R.U.N" ng-model="username" required name="username" id="username" pattern="\d{3,8}-[\d|kK]{1}">
+      </label>
+      <label class="item item-input">
+		      <span class="input-label">Contraseña:</span>
+          <input type="password" placeholder="Contraseña" ng-model="password" required name="password" id="password">
+      </label>
+		  <br />
+      <div class="padding">
+        <p ng-show="formLogin.username.$error.required">* Rut requerido</p>
+        <p ng-show="formLogin.password.$error.required">* Contraseña requerida</p>
+        <p ng-show="formLogin.username.$error.pattern">* Formato rut incorrecto</p>
+
+      </div>
+		  <div class="row">
+		    <div class="col text-center">  
+		      <button class="button button-block button-balanced icon-left ion-ionic" ng-click="login(username,password)" type="button" ng-disabled="formLogin.$invalid">Ingresar</button>
+   		  </div>
+		  </div>
+		  <div class="row">
+		  </div>
+      </form>
+      </div>
+  </ion-content>
+</ion-view>
